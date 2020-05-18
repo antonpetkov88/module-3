@@ -216,32 +216,99 @@ console.log(angleType(180));
 13)
 
 Write a JavaScript program to find the index of the greatest element of a 
-given array of integers
+given array of integers */
+
+function index(array) {
+    let greatest = 0
+    let i
+    for (let index = 0; index < array.length; index++) {
+        //const element = array[index];
+        if (array[index] > greatest){
+            greatest = array[index]
+            i = index
+        }
+        else {
+            greatest = greatest
+        }
+    }
+    return i
+}
+
+console.log(index([12, 15, 17, 9]));
+
 /*
 14)
 
 Write a JavaScript program to get the largest even number from an array of 
 integers.
+*/
+
+function largestEven(array) {
+    let largest = 0
+    for (let index = 0; index < array.length; index++) {
+        //const element = array[index];
+        if (array[index] % 2 === 0){
+            if (array[index] > largest) {
+                largest = array[index]
+            }
+            else largest = largest
+        }
+        else continue
+    }
+    return largest
+}
+
+console.log(largestEven([2, 4, 8, 10]));
+
 /*
 15)
 
 Write a JavaScript program to check two given numbers and return true if 
-one of the number is 50 or if their sum is 50.
+one of the number is 50 or if their sum is 50. */
+
+function checkNums(x, y) {
+    return ((x==50) || (y==50) || (x+y == 50));
+}
+
+console.log(checkNums(50, 50));
+console.log(checkNums(30, 50));
+console.log(checkNums(25, 25));
+console.log(checkNums(10,15));
+
 /*
 16)
 
 Write a JavaScript program to check from two given integers, whether one 
-is positive and another one is negative.
+is positive and another one is negative. */
+
+function posOrNeg(x, y){
+    if ((x > 0) || (y > 0)){
+        return "positive";
+    } else if ((x = 0) || (y = 0)){
+        return "zero"
+    } else {
+        return "negative"
+    }
+}
+console.log(posOrNeg(1, -1));
+
 /*
 17)
 
 Write a JavaScript program to create new string with first 3 characters 
-are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
+are in lower case and the others in upper case. If the string length is less
+ than 3 convert all the characters in upper case. */
+
+
+
 /*
 18)
 
 Write a JavaScript program to compute the sum of the two given integers, 
-If the sum is in the range 50..80 return 65 other wise return 80.
+If the sum is in the range 50..80 return 65 other wise return 80. */
+
+
+
 /*
 19)
 
