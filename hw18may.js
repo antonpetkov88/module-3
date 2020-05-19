@@ -5,7 +5,7 @@ Write a JavaScript program to compute the sum of the two given integers.
 If the two values are same, then returns triple their sum. */
 
 let tripleSum = function(a, b) {
-    if (a==b) {
+    if (a===b) {
         return 3*(a + b);
     } else{ return (a + b);
     }
@@ -20,7 +20,7 @@ Write a JavaScript program to check two given numbers and return true if
 one of the number is 50 or if their sum is 50.*/
 
 function checkNums(x, y) {
-    return ((x==50) || (y==50) || (x+y == 50));
+    return ((x===50) || (y===50) || (x+y === 50));
 }
 
 console.log(checkNums(50, 50));
@@ -33,9 +33,9 @@ console.log(checkNums(10,15));
 Write a JavaScript program to remove a character at the specified position 
 of a given string and return the new string.*/
 
-function remChar(string, charpos) {
-    part1 = string.substring(0, charpos);
-    part2 = string.substring(charpos + 1, string.lenght);
+function remChar(string, charposition) {
+    part1 = string.substring(0, charposition);
+    part2 = string.substring(charposition + 1, string.lenght);
     return (part1 + part2);
 }
 console.log(remChar("Liverpool", 3));
@@ -45,7 +45,7 @@ console.log(remChar("Liverpool", 6));
 4)
  Write a JavaScript program to find the largest of three given integers.*/
 
- function largestOfthree (a, b, c) {
+ function largestOfThree (a, b, c) {
      bigger = 0;
      if (a > b) {
          bigger = a;
@@ -54,11 +54,11 @@ console.log(remChar("Liverpool", 6));
      }
 
      if (c > bigger) {
-         bigger = c;
+         bigger = c; 
      }
      return bigger;
  }
- console.log(largestOfthree(1, 3, 5));
+ console.log(largestOfThree(1, 3, 5));
 
 /*
 5)
@@ -93,9 +93,9 @@ function createCopies (string, x) {
 
 }
 
-console.log(createCopies("copythis", 1));
+console.log(createCopies("copythis", 2));
 console.log(createCopies("1010", 0));
-console.log(createCopies("1010110", 3));
+console.log(createCopies("1010110", 4));
 console.log(createCopies("1001", -2));
 
 /*
@@ -219,13 +219,13 @@ Write a JavaScript program to find the index of the greatest element of a
 given array of integers */
 
 function index(array) {
-    let greatest = 0
-    let i
+    let greatest = 0             //innital value of the variable
+    let i                //it will be returned from the function
     for (let index = 0; index < array.length; index++) {
-        //const element = array[index];
-        if (array[index] > greatest){
-            greatest = array[index]
-            i = index
+                                //const element = array[index];
+        if (array[index] > greatest){ // index=0, array[index]=array[0]=12, greatest=0 | index=1, array[1]=15, greatest=12 | index = 2, array[2] = 17, greatest=15 | index = 3, array[3] = 9, greatest = 17
+            greatest = array[index] // 12 > 0 ? YES => greatest=12 | 15 > 12 ? YES => greatest = 15 | 17 > 15 ? YES => greatest = 17
+            i = index // i=0 | i=1 | i=2 | i=3
         }
         else {
             greatest = greatest
@@ -267,7 +267,7 @@ Write a JavaScript program to check two given numbers and return true if
 one of the number is 50 or if their sum is 50. */
 
 function checkNums(x, y) {
-    return ((x==50) || (y==50) || (x+y == 50));
+    return ((x===50) || (y===50) || (x+y === 50));
 }
 
 console.log(checkNums(50, 50));
@@ -305,7 +305,7 @@ are in lower case and the others in upper case. If the string length is less
 18)
 
 Write a JavaScript program to compute the sum of the two given integers, 
-If the sum is in the range 50..80 return 65 other wise return 80. */
+If the sum is in the range 50..80 return 65 otherwise return 80. */
 
 
 
@@ -326,9 +326,15 @@ In raindrop-speak, this would be a simple "Plong".
 30's factors are 1, 2, 3, 5, 6, 10, 15, 30.
 In raindrop-speak, this would be a "PlingPlang".
 34 has four factors: 1, 2, 17, and 34.
-In raindrop-speak, this would be "34". 
+In raindrop-speak, this would be "34".  */
+
+//input - number/ output - string
+// factor""" - if it's divided by 
+
+
 /*
 20)
 Convert a phrase to its acronym, like Portable Network Graphics to its 
 acronym (PNG).
 */
+// transform the strings into arrays
