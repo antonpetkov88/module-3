@@ -7,7 +7,8 @@ If the two values are same, then returns triple their sum. */
 let tripleSum = function(a, b) {
     if (a===b) {
         return 3*(a + b);
-    } else{ return (a + b);
+    } else{ 
+        return (a + b);
     }
     
 }
@@ -20,7 +21,7 @@ Write a JavaScript program to check two given numbers and return true if
 one of the number is 50 or if their sum is 50.*/
 
 function checkNums(x, y) {
-    return ((x===50) || (y===50) || (x+y === 50));
+    return ((x === 50) || (y === 50) || (x + y === 50));
 }
 
 console.log(checkNums(50, 50));
@@ -173,7 +174,7 @@ given array of strings.
 function longestString(arstr) {
     var max = arstr[0].length;
     arstr.map(v => max = Math.max(max, v.length));
-    result = arstr.filter(v => v.length == max);
+    result = arstr.filter(v => v.length === max);
     return result;
   }
   
@@ -267,7 +268,7 @@ Write a JavaScript program to check two given numbers and return true if
 one of the number is 50 or if their sum is 50. */
 
 function checkNums(x, y) {
-    return ((x===50) || (y===50) || (x+y === 50));
+    return ((x === 50) || (y === 50) || (x + y === 50));
 }
 
 console.log(checkNums(50, 50));
@@ -300,6 +301,14 @@ are in lower case and the others in upper case. If the string length is less
  than 3 convert all the characters in upper case. */
 
 
+function upperLowerCase (str){
+    if (str.length <3){
+        return str.toUppercase();
+    }
+    let firstPart = str.substring
+
+}
+
 
 /*
 18)
@@ -307,8 +316,15 @@ are in lower case and the others in upper case. If the string length is less
 Write a JavaScript program to compute the sum of the two given integers, 
 If the sum is in the range 50..80 return 65 otherwise return 80. */
 
-
-
+function computeSum(int1, int2){
+    let intSum = int1 + int2;
+    
+        if(Number.isInteger(int1) && (Number.isInteger(int2))){
+            return (50 < intSum && intSum < 80) ? (65) : (80)
+        }
+        
+}
+console.log("Sum is", computeSum(25, 45))
 /*
 19)
 
@@ -338,3 +354,64 @@ Convert a phrase to its acronym, like Portable Network Graphics to its
 acronym (PNG).
 */
 // transform the strings into arrays
+
+
+
+
+
+
+const strivify = (s) => {
+    if(typeof s === "string"){
+        return s.startsWith("Strive") ? s : `Strive ${s}`
+    }
+    else{
+        throw new Error("s must be a string")
+    }
+}
+console.log(strivify("Sure"))
+
+const check3and7 = (number) => {
+    if(typeof number==="number" && number>0){
+        return number%3===0 && number%7===0;
+    }
+    else{
+        throw new Error("Number parameter must be a positive number");
+    }
+}
+console.log(check3and7(42))
+
+
+
+const giveMeRandom = (number) => {
+    let array=[];
+    if(typeof number==="number"){ 
+        for(let i=0; i<number;){
+            let random = Math.floor(Math.random()*11);
+            if(!array.includes(random)){
+                array.push(random)
+                i++
+            }
+          
+        }
+    }
+    return array;
+}
+console.log(giveMeRandom(7))
+
+function depositCalculator(amount, months, irate) {
+    if (amount = Number && (0 < amount < 10000)){
+    
+    } else if (months = Number.isInteger && (0 < months < 12)) {
+        
+    } else if (irate = Number && (0 < irate < 10000)) {
+        let interest = amount*irate/100;
+        let monthlyInterest = interest/12;
+        let totalAmount = amount + months*(monthlyInterest);
+        return totalAmount
+    } else {
+        return ("Number must be a positive number")
+    }
+
+
+}
+console.log(depositCalculator(1000, 3, 5.5))
